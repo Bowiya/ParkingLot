@@ -10,11 +10,11 @@ public class ParkingLot {
     public ParkingLot(int capacity) {
         this.capacity = capacity;
     }
-    ArrayList<Car> parkedCars=new ArrayList<>();
+    ArrayList<Object> parkedCars=new ArrayList<>();
 
-    public boolean park(Car car) {
+    public boolean park(Object obj) {
         if (parkedCars.size() < capacity) {
-            parkedCars.add(car);
+            parkedCars.add(obj);
             return true;
         }
         return false;

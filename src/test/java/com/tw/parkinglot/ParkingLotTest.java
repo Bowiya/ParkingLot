@@ -14,9 +14,10 @@ class ParkingLotTest {
     }
 
     @Test
-    public void shouldReturnFalseWhenTheCapacityOfTheParkingLotIsZero() {
-        ParkingLot parkingLot = new ParkingLot(0);
-        Car car = new Car();
+    public void shouldReturnFalseWhenThereIsNoSpaceAvailableToPark() {
+        ParkingLot parkingLot = new ParkingLot(1);
+        Object car = new Object();
+        parkingLot.park(car);
 
         assertFalse(parkingLot.park(car));
     }
