@@ -14,7 +14,7 @@ class ParkingLotTest {
     }
 
     @Test
-    public void shouldReturnFalseWhenTheCarIsNotParked() {
+    public void shouldReturnFalseWhenTheCapacityOfTheParkingLotIsZero() {
         ParkingLot parkingLot = new ParkingLot(0);
         Car car = new Car();
 
