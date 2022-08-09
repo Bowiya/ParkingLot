@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ParkingLotTest {
     @Test
-    public void shouldReturnTrueWhenTheCarIsParkedInTheParkingLot(){
+    public void shouldReturnTrueWhenTheCarIsParkedInTheParkingLot() {
         ParkingLot parkingLot = new ParkingLot(10);
         Object car = new Object();
 
