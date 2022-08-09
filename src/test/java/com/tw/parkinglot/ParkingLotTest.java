@@ -8,7 +8,7 @@ class ParkingLotTest {
     @Test
     public void shouldReturnTrueWhenTheCarIsParkedInTheParkingLot(){
         ParkingLot parkingLot = new ParkingLot(10);
-        Car car = new Car();
+        Object car = new Object();
 
         assertTrue(parkingLot.park(car));
     }
