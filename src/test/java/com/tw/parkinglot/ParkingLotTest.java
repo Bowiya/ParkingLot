@@ -10,7 +10,8 @@ class ParkingLotTest {
         ParkingLot parkingLot = new ParkingLot(10);
         Object car = new Object();
 
-        assertTrue(parkingLot.park(car));
+
+        assertEquals("Your car is parked", parkingLot.park(car));
     }
 
     @Test
@@ -19,7 +20,7 @@ class ParkingLotTest {
         Object car = new Object();
         parkingLot.park(car);
 
-        assertFalse(parkingLot.park(car));
+        assertEquals("Your car is not parked", parkingLot.park(car));
     }
 
     @Test
@@ -28,7 +29,7 @@ class ParkingLotTest {
         Object car = new Object();
         parkingLot.park(car);
 
-        assertTrue(parkingLot.unPark(car));
+        assertEquals("Your car is unparked", parkingLot.unPark(car));
     }
 
     @Test
@@ -36,6 +37,6 @@ class ParkingLotTest {
         ParkingLot parkingLot = new ParkingLot(5);
         Object car = new Object();
 
-        assertFalse(parkingLot.unPark(car));
+        assertEquals("The car you are asking to unpark is not present", parkingLot.unPark(car));
     }
 }

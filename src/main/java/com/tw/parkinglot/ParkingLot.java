@@ -11,19 +11,19 @@ public class ParkingLot {
         this.capacity = capacity;
     }
 
-    public boolean park(Object car) {
+    public String park(Object car) {
         if (parkedCars.size() < capacity) {
             parkedCars.add(car);
-            return true;
+            return "Your car is parked";
         }
-        return false;
+        return "Your car is not parked";
     }
 
-    public boolean unPark(Object car) {
+    public String unPark(Object car) {
         if (parkedCars.contains(car)) {
             parkedCars.remove(car);
-            return true;
+            return "Your car is unparked";
         }
-        return false;
+        return "The car you are asking to unpark is not present";
     }
 }
