@@ -21,4 +21,21 @@ class ParkingLotTest {
 
         assertFalse(parkingLot.park(car));
     }
+
+    @Test
+    public void shouldReturnTrueWhenTheCarIsUnParkedFromTheParkingLot() {
+        ParkingLot parkingLot = new ParkingLot(5);
+        Object car = new Object();
+        parkingLot.park(car);
+
+        assertTrue(parkingLot.unPark(car));
+    }
+
+    @Test
+    public void shouldReturnFalseWhenTheCarIsNotPresentInTheParkingLot() {
+        ParkingLot parkingLot = new ParkingLot(5);
+        Object car = new Object();
+
+        assertFalse(parkingLot.unPark(car));
+    }
 }
