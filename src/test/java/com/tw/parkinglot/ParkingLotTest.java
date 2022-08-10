@@ -2,6 +2,7 @@ package com.tw.parkinglot;
 
 import org.junit.jupiter.api.Test;
 
+import static com.tw.parkinglot.ParkingLot.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParkingLotTest {
@@ -11,7 +12,7 @@ class ParkingLotTest {
         Object car = new Object();
 
 
-        assertEquals("Your car is parked", parkingLot.park(car));
+        assertEquals(PARKED, parkingLot.park(car));
     }
 
     @Test
@@ -20,7 +21,7 @@ class ParkingLotTest {
         Object car = new Object();
         parkingLot.park(car);
 
-        assertEquals("Your car is not parked", parkingLot.park(car));
+        assertEquals(NOT_PARKED, parkingLot.park(car));
     }
 
     @Test
@@ -29,7 +30,7 @@ class ParkingLotTest {
         Object car = new Object();
         parkingLot.park(car);
 
-        assertEquals("Your car is unparked", parkingLot.unPark(car));
+        assertEquals(UNPARKED, parkingLot.unPark(car));
     }
 
     @Test
@@ -37,6 +38,6 @@ class ParkingLotTest {
         ParkingLot parkingLot = new ParkingLot(5);
         Object car = new Object();
 
-        assertEquals("The car you are asking to unpark is not present", parkingLot.unPark(car));
+        assertEquals(CAR_TO_BE_UNPARKED_IS_NOT_PRESENT, parkingLot.unPark(car));
     }
 }

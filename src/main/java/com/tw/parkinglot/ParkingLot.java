@@ -4,15 +4,14 @@ import java.util.ArrayList;
 
 public class ParkingLot {
     public final int capacity;
-    public final String PARKED = "Your car is parked";
-    public final String NOT_PARKED = "Your car is not parked";
-    public final String UNPARKED = "Your car is unparked";
-    public final String CAR_TO_BE_UNPARKED_IS_NOT_PRESENT = "The car you are asking to unpark is not present";
+    public static final String PARKED = "Your car is parked";
+    public static final String NOT_PARKED = "Your car is not parked";
+    public static final String UNPARKED = "Your car is unparked";
+    public static final String CAR_TO_BE_UNPARKED_IS_NOT_PRESENT = "The car you are asking to unpark is not present";
 
     ArrayList<Object> parkedCars = new ArrayList<>();
 
-    public ParkingLot(int capacity) {
-        this.capacity = capacity;
+    public ParkingLot(int capacity) {this.capacity = capacity;
     }
 
     public String park(Object car) {
