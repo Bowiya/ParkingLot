@@ -11,22 +11,23 @@ public class ParkingLot {
 
     ArrayList<Object> parkedCars = new ArrayList<>();
 
-    public ParkingLot(int capacity) {this.capacity = capacity;
+    public ParkingLot(int capacity) {
+        this.capacity = capacity;
     }
 
-    public String park(Object car) {
+    public String park(Object car) throws Exception {
         if (parkedCars.size() < capacity) {
             parkedCars.add(car);
             return PARKED;
         }
-        return NOT_PARKED;
+        throw new Exception("Your car is not parked");
     }
 
-    public String unPark(Object car) {
+    public String unPark(Object car) throws Exception {
         if (parkedCars.contains(car)) {
             parkedCars.remove(car);
             return UNPARKED;
         }
-        return CAR_TO_BE_UNPARKED_IS_NOT_PRESENT;
+        throw new Exception("The car you are asking to unpark is not present");
     }
 }
