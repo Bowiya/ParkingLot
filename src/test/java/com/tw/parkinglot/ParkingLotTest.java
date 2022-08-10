@@ -32,7 +32,7 @@ class ParkingLotTest {
     }
 
     @Test
-    public void shouldReturnFalseWhenTheCarIsNotPresentInTheParkingLot() {
+    public void shouldReturnFalseWhenTheCarToBeUnParkedIsNotPresentInTheParkingLot() {
         ParkingLot parkingLot = new ParkingLot(5);
         Object car = new Object();
 

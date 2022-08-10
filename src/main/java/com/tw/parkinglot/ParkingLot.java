@@ -3,7 +3,7 @@ package com.tw.parkinglot;
 import java.util.ArrayList;
 
 public class ParkingLot {
-    public int capacity;
+    public final int capacity;
 
     ArrayList<Object> parkedCars = new ArrayList<>();
 
@@ -11,17 +11,17 @@ public class ParkingLot {
         this.capacity = capacity;
     }
 
-    public boolean park(Object obj) {
+    public boolean park(Object car) {
         if (parkedCars.size() < capacity) {
-            parkedCars.add(obj);
+            parkedCars.add(car);
             return true;
         }
         return false;
     }
 
-    public boolean unPark(Object obj) {
-        if (parkedCars.contains(obj)) {
-            parkedCars.remove(obj);
+    public boolean unPark(Object car) {
+        if (parkedCars.contains(car)) {
+            parkedCars.remove(car);
             return true;
         }
         return false;
