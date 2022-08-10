@@ -1,6 +1,5 @@
 package com.tw.parkinglot;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static com.tw.parkinglot.ParkingLot.*;
