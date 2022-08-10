@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ParkingLotTest {
     @Test
-    public void shouldReturnTrueWhenTheCarIsParkedInTheParkingLot() {
+    public void shouldReturnYourCarIsParkedMessageWhenTheCarIsParkedInTheParkingLot() {
         ParkingLot parkingLot = new ParkingLot(10);
         Object car = new Object();
 
@@ -15,7 +15,7 @@ class ParkingLotTest {
     }
 
     @Test
-    public void shouldReturnFalseWhenThereIsNoSpaceAvailableToPark() {
+    public void shouldReturnYourCarIsNotParkedMessageWhenThereIsNoSpaceAvailableToPark() {
         ParkingLot parkingLot = new ParkingLot(1);
         Object car = new Object();
         parkingLot.park(car);
@@ -24,7 +24,7 @@ class ParkingLotTest {
     }
 
     @Test
-    public void shouldReturnTrueWhenTheCarIsUnParkedFromTheParkingLot() {
+    public void shouldReturnYourCarIsUnparkedMessageWhenTheCarIsUnParkedFromTheParkingLot() {
         ParkingLot parkingLot = new ParkingLot(5);
         Object car = new Object();
         parkingLot.park(car);
@@ -33,7 +33,7 @@ class ParkingLotTest {
     }
 
     @Test
-    public void shouldReturnFalseWhenTheCarToBeUnParkedIsNotPresentInTheParkingLot() {
+    public void shouldReturnTheCarYouAreAskingToUnparkIsNotPresentMessageWhenTheCarToBeUnParkedIsNotPresentInTheParkingLot() {
         ParkingLot parkingLot = new ParkingLot(5);
         Object car = new Object();
 
