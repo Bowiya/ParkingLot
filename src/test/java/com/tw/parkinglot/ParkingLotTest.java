@@ -16,7 +16,7 @@ class ParkingLotTest {
     }
 
     @Test
-    public void shouldReturnYourCarIsNotParkedMessageWhileGettingTheMessageFromTheExceptionThrown() throws Exception {
+    public void shouldReturnTheExceptionMessageWhenTheCarIsNotParked() throws Exception {
         ParkingLot parkingLot = new ParkingLot(1);
         Object car = new Object();
         parkingLot.park(car);
@@ -29,7 +29,7 @@ class ParkingLotTest {
     }
 
     @Test
-    public void shouldReturnYourCarIsUnparkedMessageWhenTheCarIsUnParkedFromTheParkingLot() throws Exception {
+    public void shouldReturnUnparkedMessageWhenTheCarIsUnParkedFromTheParkingLot() throws Exception {
         ParkingLot parkingLot = new ParkingLot(5);
         Object car = new Object();
         parkingLot.park(car);
@@ -38,7 +38,7 @@ class ParkingLotTest {
     }
 
     @Test
-    public void shouldReturnTheCarYouAreAskingToUnparkIsNotPresentMessageWhileGettingTheMessageFromTheExceptionThrown() {
+    public void shouldReturnTheExceptionMessageWhenTheCarToBeUnparkedIsNotPresent() {
         ParkingLot parkingLot = new ParkingLot(5);
         Object car = new Object();
         Exception thrown = assertThrows(Exception.class, () -> {

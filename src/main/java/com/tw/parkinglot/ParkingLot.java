@@ -20,7 +20,7 @@ public class ParkingLot {
             parkedCars.add(car);
             return PARKED;
         }
-        throw new Exception(UNPARKED);
+        throw new Exception(NOT_PARKED);
     }
 
     public String unPark(Object car) throws Exception {
