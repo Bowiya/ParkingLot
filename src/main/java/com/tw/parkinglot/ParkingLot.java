@@ -20,7 +20,7 @@ public class ParkingLot {
             parkedCars.add(car);
             return PARKED;
         }
-        throw new Exception("Your car is not parked");
+        throw new Exception(UNPARKED);
     }
 
     public String unPark(Object car) throws Exception {
@@ -28,6 +28,6 @@ public class ParkingLot {
             parkedCars.remove(car);
             return UNPARKED;
         }
-        throw new Exception("The car you are asking to unpark is not present");
+        throw new Exception(CAR_TO_BE_UNPARKED_IS_NOT_PRESENT);
     }
 }
