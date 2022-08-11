@@ -15,19 +15,19 @@ public class ParkingLot {
         this.capacity = capacity;
     }
 
-    public String park(Object car) throws Exception {
+    public String park(Object car) throws CarNotParkedException {
         if (parkedCars.size() < capacity) {
             parkedCars.add(car);
             return PARKED;
         }
-        throw new Exception(NOT_PARKED);
+        throw new CarNotParkedException(NOT_PARKED);
     }
 
-    public String unPark(Object car) throws Exception {
+    public String unPark(Object car) throws CarNotPresentException {
         if (parkedCars.contains(car)) {
             parkedCars.remove(car);
             return UNPARKED;
         }
-        throw new Exception(CAR_TO_BE_UNPARKED_IS_NOT_PRESENT);
+        throw new CarNotPresentException(CAR_TO_BE_UNPARKED_IS_NOT_PRESENT);
     }
 }

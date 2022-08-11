@@ -7,16 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ParkingLotTest {
     @Test
-    public void shouldReturnYourCarIsParkedMessageWhenTheCarIsParkedInTheParkingLot() throws Exception {
+    public void shouldReturnYourCarIsParkedMessageWhenTheCarIsParkedInTheParkingLot() throws CarNotParkedException {
         ParkingLot parkingLot = new ParkingLot(10);
         Object car = new Object();
-
 
         assertEquals(PARKED, parkingLot.park(car));
     }
 
     @Test
-    public void shouldReturnTheExceptionMessageWhenTheCarIsNotParked() throws Exception {
+    public void shouldReturnTheExceptionMessageWhenTheCarIsNotParked() throws CarNotParkedException {
         ParkingLot parkingLot = new ParkingLot(1);
         Object car = new Object();
         parkingLot.park(car);
@@ -29,7 +28,7 @@ class ParkingLotTest {
     }
 
     @Test
-    public void shouldReturnUnparkedMessageWhenTheCarIsUnParkedFromTheParkingLot() throws Exception {
+    public void shouldReturnUnparkedMessageWhenTheCarIsUnParkedFromTheParkingLot() throws CarNotParkedException, CarNotPresentException {
         ParkingLot parkingLot = new ParkingLot(5);
         Object car = new Object();
         parkingLot.park(car);
@@ -41,6 +40,7 @@ class ParkingLotTest {
     public void shouldReturnTheExceptionMessageWhenTheCarToBeUnparkedIsNotPresent() {
         ParkingLot parkingLot = new ParkingLot(5);
         Object car = new Object();
+
         Exception thrown = assertThrows(Exception.class, () -> {
             parkingLot.unPark(car);
         });
